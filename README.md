@@ -35,8 +35,8 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign: true|
 |group_id|integer|null: false, foreign: true|
-|body|text|foreign: true|
-|image|string|foreign: true|
+|body|text|
+|image|string|
 
 ### Association
 - belongs_to :group
