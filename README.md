@@ -13,7 +13,7 @@
 ## userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|name|string|null: false, unique: true|
 
 ### Association
 - has_many :groups_users
@@ -23,7 +23,7 @@
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign: true|
+|name|string|null: false, unique: true|
 
 ### Association
 - has_many :groups_users
