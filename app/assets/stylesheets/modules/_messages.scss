@@ -2,7 +2,11 @@
   box-sizing: border-box;
 }
 
-
+.wrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
 
 .Side-Bar{
   background-color: #253141;
@@ -19,7 +23,6 @@
     display: flex;
     justify-content: space-between;
     font-size: 16px;
-    font-weight: bold;
     align-items: center;
     .icon-edit{
       color: #ffffff;
@@ -47,3 +50,47 @@
   }
 }
 
+.Chat-main{
+  display: block;
+}
+.Chat-main__group-info{
+  background-color: pink;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 950px;
+  .main__group-name{
+    color: #333333;
+    font-size: 20px;
+    padding: 35px 0 15px 40px;
+  }
+  .main__member{
+    display: flex;
+    padding-left: 40px;
+    
+    .main__member-list{
+      color: #999999;
+      font-size: 12px;
+    }
+    .main__member-name{
+      color: #999999;
+      font-size: 12px;
+    }
+  }
+  .Edit-btn{
+    border: solid #38aef0;
+    color: #38aef0;
+    height: 40px;
+    width: 72px;
+    margin: 0 40px ;
+  }
+}
+.Chat-maim__message-list{
+
+}
+.Chan-main__message-form{
+
+}
+  
