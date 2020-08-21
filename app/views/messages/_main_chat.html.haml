@@ -1,13 +1,13 @@
 .Chat-main
   .Chat-main__group-info
-    .group-info
+    .Group-info
       .main__group-name
         group-name
       .main__member
         .main__member-name
           Member:
         .main__member-name
-          YOKO
+          yoko
     .Gropu-btn
     = link_to "#" do
       .Edit-btn
@@ -15,17 +15,17 @@
 
   .Chat-main__message-info
     .Chat-maim__message-list
-      .main__message-user-neme
-        YOKO
+      %b.main__message-user-name
+        yoko
       .main__info-date
         2020年08月20日 18時30分
     .Main__message
       hello
   .Chan-main__message-form
-    .Message__box
-      %input.class-text-box{tpe:  "text"}
-      %label{class: "input-box__image"}
-        = icon('fas', 'image')
-        %input{type: "file"}
-
-    .Message__submit
+    %form.Message__box
+      .Message__box__content
+        %input.input-text{:placeholder => "type a message", :type => "text"}
+          %label{class: "input-box__image"}
+            = icon('far', 'image')
+            %input{type: "file", class:"Hidden"}
+      %input.class-Message__submit{type: "submit" ,value: "Send"}
