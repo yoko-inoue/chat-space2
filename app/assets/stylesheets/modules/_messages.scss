@@ -38,12 +38,12 @@ $white:#ffffff;
   width: 300px;
   height: calc(100vh - 100px);
   border: solid #2f3e51;
-  .Group-name{
+  .Group__name{
     font-size: 15px;
     color: $white;
     margin: 20px;
   }
-  .Group-message{
+  .Group__message{
     font-size: 11px;
     color: $white;
     margin: 5px 20px;
