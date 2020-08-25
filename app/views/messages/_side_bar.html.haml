@@ -3,7 +3,6 @@
     .top-items
       %b.user-name
         = current_user.name
-    
       %ul
         = link_to 'groups/new' do
           <i class= "far fa-edit icon-edit"></i>
@@ -12,8 +11,8 @@
   .Group-List
     - current_user.groups.each do |group|
       .Group
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .Group__name
             = group.name
           .Group__message
-            メッセージはまだありません
+            = group.show_last_message
