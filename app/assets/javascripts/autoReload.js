@@ -11,7 +11,7 @@ $(function(){
               ${message.created_at}
             </div>
           </div>
-          <div class="Main-message">
+          <div class="Main__message">
             <p class="Message__content">
               ${message.content}
             </p>
@@ -30,7 +30,7 @@ $(function(){
             ${message.created_at}
           </div>
         </div>
-        <div class="Main-message">
+        <div class="Main__message">
           <p class="Message__content">
             ${message.content}
           </p>
@@ -42,7 +42,7 @@ $(function(){
 
   let reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-    let last_message_id = $('.MessageBox:last').data("message-id") || 0;
+    let last_message_id = $('.Chat-main__message-info:last').data("message-id") || 0;
     $.ajax({
       //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
       url: "api/messages",
@@ -62,8 +62,8 @@ $(function(){
         insertHTML += buildHTML(message)
       });
       //メッセージが入ったHTMLに、入れ物ごと追加
-      $('.MessageField').append(insertHTML);
-      $('.MessageField').animate({ scrollTop: $('.MessageField')[0]});
+      $('.Chat-main__message').append(insertHTML);
+      $('.Chat-main__message').animate({ scrollTop: $('.Chat-main__message')[0]});
     }
   })
     .fail(function() {
