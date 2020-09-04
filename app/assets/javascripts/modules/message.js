@@ -1,5 +1,4 @@
 $(function(){
-  
   function buildHTML(message){
     if ( message.image ) {
       let html =
@@ -40,13 +39,14 @@ $(function(){
       return html;
     };
   }
+
   $('.Message__box').on('submit',function(e){
     e.preventDefault();
     let formData = new FormData(this);
     let url = $(this).attr('action');
     $.ajax({
       url: url,
-      type: 'POST',
+      type: "POST",
       data: formData,
       dataType: 'json',
       processData: false,
@@ -61,6 +61,8 @@ $(function(){
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
-    });
+      $('.Form__submit').prop("disabled", false);
+    }); 
+    return false;
   });
 });
